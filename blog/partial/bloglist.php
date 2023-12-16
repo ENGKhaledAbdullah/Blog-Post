@@ -2,7 +2,7 @@
 require('header.php');
 require_once('../Admin/Post/view.php');
 require_once('../Admin/Post/delete.php');
-
+require('dateHelper.php');
 
 ?>
 
@@ -47,7 +47,7 @@ require_once('../Admin/Post/delete.php');
             <tr style="height:65px;">
                 <td><?= $row['id'] ?></td>
                 <td><?= $row['title'] ?></td>
-                <td><?= $row['publishDate'] ?></td>
+                <td><?= DateHelper::toDate($row['publishDate'], 'F d, Y h:i A')?></td>
                 <td>
                     <a href="<?= ROOT_PATH . 'partial/post.php?id=' . $row['id'] ?>" class="btn btn-primary">Details</a>
                     <a href="<?= ROOT_PATH . 'Admin/Post/update.php?id=' . $row['id'] ?>" class="btn btn-dark">Update</a>

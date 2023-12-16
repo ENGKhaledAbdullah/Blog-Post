@@ -18,7 +18,7 @@ $row = $post_result->fetch_assoc()
                             <span class="meta">
                                 Posted by
                                 <a href="#!"><?=$row['author']?></a>
-                                on <?= DateHelper::toDate($row['publishDate'], 'F d, Y')?>
+                                on <?= DateHelper::toDate($row['publishDate'], 'F d, Y h:i A')?>
                             </span>
                         </div>
                     </div>
